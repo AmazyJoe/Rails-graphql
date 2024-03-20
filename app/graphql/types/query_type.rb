@@ -27,5 +27,13 @@ module Types
     def test_field
       "Hello World!"
     end
+  
+      field :users, [Types::UserType], null: false, resolve: Resolvers::UsersResolver
+      field :posts, [Types::PostType], null: false, resolve: Resolvers::PostsResolver
+    
+
+
   end
+
+  
 end
